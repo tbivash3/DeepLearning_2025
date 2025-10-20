@@ -100,7 +100,7 @@ class MLPClassifierDeep(nn.Module):
         h: int = 64,
         w: int = 64,
         num_classes: int = 6,
-        hidden_dim: int = 32,
+        hidden_dim: int = 128,
         num_layers: int = 5,
     ):
         """
@@ -140,13 +140,15 @@ class MLPClassifierDeep(nn.Module):
         return self.mlp_classifier_deep(x.view(-1, self.flatten_dim))
 
 
+
+
 class MLPClassifierDeepResidual(nn.Module):
     def __init__(
         self,
         h: int = 64,
         w: int = 64,
         num_classes: int = 6,
-        hidden_dim: int = 32,
+        hidden_dim: int = 128,
         num_blocks: int = 2
     ):
         """
